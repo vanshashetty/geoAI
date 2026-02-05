@@ -1,0 +1,23 @@
+
+# Core
+numpy
+matplotlib
+pandas
+geopandas
+shapely
+rasterio
+folium
+
+# ML
+tensorflow
+torch
+torchvision
+
+# EO access (optional)
+sentinelhub
+earthengine-api
+
+# Dev
+black
+flake8
+pytest
