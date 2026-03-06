@@ -1,0 +1,6 @@
+
+earthengine-api>=0.1.395
+folium>=0.15.0
+gradio>=4.20.0
+python-dotenv>=1.0.1
+PyYAML>=6.0.1
