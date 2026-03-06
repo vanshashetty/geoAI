@@ -39,11 +39,11 @@ The GEE app builds **cloud‑masked composites** and visualizes **NDVI, NDWI, MN
     ├─ docs/
     │  ├─ design.md                  # Architecture for ML + GEE explorer (Mermaid)
     │  └─ requirements.md            # (optional, if present)
-    ├─ src/                          # ML modules (unchanged)
-    ├─ scripts/                      # CLI helpers (unchanged)
+    ├─ src/                          # ML modules (tba)
+    ├─ scripts/                      # CLI helpers (tba)
     ├─ notebooks/                    # Jupyter workflows (unchanged)
     ├─ tests/                        # ML/unit tests (unchanged)
-    ├─ .github/workflows/            # CI for repo (unchanged)
+    ├─ .github/workflows/            # CI for repo (tba)
     └─ apps/
        └─ gee-water-explorer/        # NEW: Standalone GEE UI (no ML deps)
           ├─ app.py
