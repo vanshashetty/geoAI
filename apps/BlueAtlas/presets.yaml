@@ -1,0 +1,21 @@
+Udupi (coastal):
+  lat: 13.3409
+  lon: 74.7421
+  buffer_km: 2.0
+  start: '2023-01-01'
+  end: '2023-12-31'
+  threshold: 0.06
+Sarjapur (Bengaluru):
+  lat: 12.8906
+  lon: 77.7719
+  buffer_km: 3.0
+  start: '2023-01-01'
+  end: '2023-12-31'
+  threshold: 0.02
+Demo Reservoir:
+  lat: 12.9592
+  lon: 77.6974
+  buffer_km: 2.0
+  start: '2023-06-01'
+  end: '2023-09-30'
+  threshold: 0.04
