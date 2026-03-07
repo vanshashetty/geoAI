@@ -203,3 +203,7 @@ cd apps/gee-water-explorer
 printf "GEE_PROJECT=<your-gee-project-id>\n" > .env
 python app.py
 ```
+
+
+Recorded video of the prototype: 
+[Recording 2026-03-06 224027.zip](https://github.com/user-attachments/files/25816805/Recording.2026-03-06.224027.zip)
