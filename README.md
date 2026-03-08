@@ -1,5 +1,5 @@
 
-# BlueAtlas — Clean Water Geospatial ML + GEE Water Indices Explorer
+# BlueAtlas — Geospatial Pure Water Detection
 
 Blue Atlas is a satellite‑driven water‑intelligence system designed to detect, quantify, and monitor surface‑water presence and dynamics using multispectral Earth‑observation data. Leveraging atmospherically corrected surface‑reflectance products from the Sentinel‑2 SR (HARMONIZED) constellation, which provides operational 10–20 m multispectral measurements suitable for consistent cross‑date hydrological analysis, and Landsat 8/9 Level‑2 products that offer calibrated VNIR and SWIR reflectance with global continuity for long‑term surface‑water monitoring, Blue Atlas constructs harmonized temporal composites to characterize water signatures across diverse landforms.<img width="6917" height="49" alt="image" src="https://github.com/user-attachments/assets/3f3b2e9f-604c-41c3-9910-c0f8504626f8" />
 
