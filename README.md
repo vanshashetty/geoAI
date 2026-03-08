@@ -5,10 +5,13 @@ Blue Atlas is a satellite‑driven water‑intelligence system designed to detec
 
 
 **geoAI** is a poly‑repo for **geospatial ML** (TensorFlow/PyTorch workflows) plus a lightweight **Google Earth Engine (GEE) Water & Indices Explorer** for quick, no‑GPU exploration of **Sentinel‑2** and **Landsat 8/9**.  
-The GEE app builds **cloud‑masked composites** and visualizes **NDVI, NDWI, MNDWI, NBR, NDTI** with an interactive **Gradio + Folium** UI.
+The GEE app builds **cloud‑masked composites** and visualizes **NDVI, NDWI, MNDWI, NBR, NDTI** with an interactive **Gradio + Folium** UI. We explore practical extended applications of deep learning frameworks—TensorFlow and PyTorch—in space science and geoscience for satellite image classification and land cover mapping. The primary objective is to identify natural sources of clean water (e.g., rivers, lakes, wetlands, snow/ice-fed springs) directly from remote sensing data, without focusing on post-filtration or treatment parameters. 
 
 *   The **ML stack** (training/inference, notebooks, scripts) remains **unchanged**.
 *   The **GEE app** lives under `apps/BlueAtlas/` and can be run or deployed independently.
+
+*   <img width="1507" height="628" alt="image" src="https://github.com/user-attachments/assets/32a294d8-e8b9-49b4-823f-b66f5dc40657" />
+
 
 ***
 
