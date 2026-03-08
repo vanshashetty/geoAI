@@ -8,7 +8,7 @@ Blue Atlas is a satellite‑driven water‑intelligence system designed to detec
 The GEE app builds **cloud‑masked composites** and visualizes **NDVI, NDWI, MNDWI, NBR, NDTI** with an interactive **Gradio + Folium** UI.
 
 *   The **ML stack** (training/inference, notebooks, scripts) remains **unchanged**.
-*   The **GEE app** lives under `apps/gee-water-explorer/` and can be run or deployed independently.
+*   The **GEE app** lives under `apps/BlueAtlas/` and can be run or deployed independently.
 
 ***
 
@@ -45,7 +45,7 @@ The GEE app builds **cloud‑masked composites** and visualizes **NDVI, NDWI, MN
     ├─ tests/                        # ML/unit tests (unchanged)
     ├─ .github/workflows/            # CI for repo (tba)
     └─ apps/
-       └─ gee-water-explorer/        # NEW: Standalone GEE UI (no ML deps)
+       └─ BlueAtlas/        # NEW: Standalone GEE UI (no ML deps)
           ├─ app.py
           ├─ requirements.txt        # earthengine-api, folium, gradio, PyYAML, dotenv
           ├─ presets.yaml            # saved AOIs and thresholds
@@ -66,7 +66,7 @@ Why separate `requirements.txt`?
 ### A) Run the **GEE Water & Indices Explorer** (no ML deps)
 
 ```bash
-cd apps/gee-water-explorer
+cd apps/BlueAtlas
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
@@ -81,7 +81,7 @@ python app.py
 *   Quick run from repo root (no venv creation shown):
 
 ```bash
-python apps/gee-water-explorer/app.py
+python apps/BlueAtlas/app.py
 ```
 
 ### B) Run the **ML stack** (original flows; TF/PyTorch)
@@ -105,7 +105,7 @@ jupyter lab
 
 ```bash
 # Create a new Gradio Space and push only the app folder contents
-cd apps/gee-water-explorer
+cd apps/BlueAtlas
 # Upload app.py + requirements.txt (+ presets.yaml if you want)
 # Add a Space secret named: GEE_PROJECT
 ```
@@ -113,7 +113,7 @@ cd apps/gee-water-explorer
 ### Google Cloud Run (container + HTTPS + autoscaling)
 
 ```bash
-cd apps/gee-water-explorer
+cd apps/BlueAtlas
 export PROJECT=<your-project-id>
 bash deploy_cloud_run.sh
 ```
@@ -142,13 +142,13 @@ The script:
 .PHONY: gee run-gee docker-gee
 
 gee:
-	python -m venv .venv_gee && . .venv_gee/bin/activate && pip install -r apps/gee-water-explorer/requirements.txt
+	python -m venv .venv_gee && . .venv_gee/bin/activate && pip install -r apps/BlueAtlas/requirements.txt
 
 run-gee:
-	cd apps/gee-water-explorer && GEE_PROJECT=$(GEE_PROJECT) python app.py
+	cd apps/BlueAtlas && GEE_PROJECT=$(GEE_PROJECT) python app.py
 
 docker-gee:
-	cd apps/gee-water-explorer && docker build -t gee-water . && docker run -p 7860:7860 --env GEE_PROJECT=$(GEE_PROJECT) gee-water
+	cd apps/BlueAtlas && docker build -t gee-water . && docker run -p 7860:7860 --env GEE_PROJECT=$(GEE_PROJECT) gee-water
 ```
 
 Usage:
@@ -185,13 +185,13 @@ MIT (see `LICENSE`).
 **From root:**
 
 ```bash
-python apps/gee-water-explorer/app.py
+python apps/BlueAtlas/app.py
 ```
 
 **Docker (local):**
 
 ```bash
-cd apps/gee-water-explorer
+cd apps/BlueAtlas
 docker build -t gee-water .
 docker run -p 7860:7860 --env GEE_PROJECT=<your-project> gee-water
 ```
@@ -199,7 +199,7 @@ docker run -p 7860:7860 --env GEE_PROJECT=<your-project> gee-water
 **Create `.env` next to app.py (optional alternative to export):**
 
 ```bash
-cd apps/gee-water-explorer
+cd apps/BlueAtlas
 printf "GEE_PROJECT=<your-gee-project-id>\n" > .env
 python app.py
 ```
